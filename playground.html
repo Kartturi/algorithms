@@ -9,32 +9,22 @@
 </head>
 
 <body>
-
-
-
     <script>
-        console.log(maxChar("aabbb"));
-        function maxChar(str) {
-            const charMap = {};
-            let max = 0;
-            let maxChar = '';
 
-            for (let char of str) {
-                if (charMap[char]) {
-                    charMap[char]++;
-                } else {
-                    charMap[char] = 1;
+        steps(16)
+        function steps(n) {
+            for (let row = 0; row < n; row++) {
+                let stairs = "";
+
+                for (let column = 0; column < n; column++) {
+                    if (column <= row) {
+                        stairs += "#"
+                    } else {
+                        stairs += ""
+                    }
                 }
+                console.log(stairs);
             }
-
-            for (let char in charMap) {
-                if (charMap[char] > max) {
-                    max = charMap[char];
-                    maxChar = char;
-                }
-            }
-
-            return maxChar;
         }
     </script>
 </body>

@@ -7,7 +7,7 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 
-//method 1 array methods
+//method 1 array methods time O(n) space O(1)
 /* function reverse(str) {
      
     return str.split("").reverse().join("");
@@ -34,19 +34,19 @@
 
 } */
 //method 4 spread operator
-  /* function reverse(str) {
-      return [...str].reverse().join("");
-  } */
+/* function reverse(str) {
+    return [...str].reverse().join("");
+} */
 
-  //method 5 recursion
+//method 5 recursion
 
-  function reverse(str){
-    if(str === "") {
+function reverse(str) {
+    if (str === "") {
         return str
     } else {
         return reverse(str.substr(1)) + str[0];
-      }
     }
+}
 
 
 module.exports = reverse;
