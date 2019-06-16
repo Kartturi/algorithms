@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-
-        fib(4);
-        function fib(n) {
-            console.log("asd")
-            let base = 1;
-            let newNum = 0;
-            let holder = 0;
-
-            for (let i = 0; i < n; i++) {
-                let holder = newNum;
-
-                newNum = base + newNum;
-                base = holder;
-
-                console.log("newNum:", newNum, "base:", base)
-            }
-
-            console.log(newNum)
+      function expandedForm(num) {
+        // Your code here
+        let strArr = num
+          .toString()
+          .split("")
+          .reverse();
+        console.log(strArr);
+        let init = 0;
+        let asd = 1;
+        for (str of strArr) {
+          console.log(init);
+          init = init + Number(str) * asd;
+          console.log(init);
+          asd = asd * 10;
+          console.log(asd, "asd", init, "init", str, "str");
         }
-    </script>
-</body>
 
+        return init.toString();
+      }
+
+      expandedForm(12);
+    </script>
+  </body>
 </html>
